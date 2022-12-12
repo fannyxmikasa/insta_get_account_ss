@@ -25,7 +25,8 @@ let encoded = encodeURI(uri);
 let decoded = decodeURI(encoded);
 console.log(typeof(decoded))
 decoded = decoded.replaceAll("+", " ");
-document.querySelector('#dp').src = `http://api.scraperapi.com/?api_key=010e6bdc516d1ce035d6eeb741d5ac45&url=${json['dp']}`
+// http://api.scraperapi.com/?api_key=010e6bdc516d1ce035d6eeb741d5ac45&url=${json['dp']}
+document.querySelector('#dp').src = json['dp'];
 document.querySelector('#user_name').innerHTML = json['user_name']
 document.querySelector('#post_count').innerHTML = json['post_count']
 document.querySelector('#follower_count').innerHTML = json['follower_count']
